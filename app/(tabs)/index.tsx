@@ -1,35 +1,33 @@
-import { StyleSheet, View } from "react-native";
-
-import { HelloWave } from "@/components/hello-wave";
-import { ThemedText } from "@/components/themed-text";
-import { ThemedView } from "@/components/themed-view";
+import { StatusBar as ExpoStatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   return (
-    <View>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Meals To Go!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-    </View>
+    <>
+      <SafeAreaProvider>
+        <SafeAreaView style={{ flex: 1 }}>
+          <View style={styles.styleSearch}>
+            <Text>Search</Text>
+          </View>
+          <View style={styles.titleContainer}>
+            <Text>Meals To Go! OO</Text>
+          </View>
+        </SafeAreaView>
+      </SafeAreaProvider>
+      <ExpoStatusBar style="auto"></ExpoStatusBar>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   titleContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
+    flex: 1,
+    backgroundColor: "blue",
+    justifyContent: "center",
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: "absolute",
+  styleSearch: {
+    padding: 16,
+    backgroundColor: "green",
   },
 });
