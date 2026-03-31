@@ -67,12 +67,13 @@ export const ResturantInfoCard = ({ resturant = {} }) => {
             {isClosedTemporarily && (
               <Text style={{ color: "red" }}>CLOSED TEMPORARILY</Text>
             )}
-            <Spacer variant={"left.large"} />
-
-            {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
+            <Spacer position="left" size="large">
+              {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
+            </Spacer>
             {/* <View style={{ paddingLeft: 16 }} /> */}
-            <Spacer variant={"left.large"} />
-            <Image style={{ width: 15, height: 15 }} source={{ uri: icon }} />
+            <Spacer position="left" size="large">
+              <Image style={{ width: 15, height: 15 }} source={{ uri: icon }} />
+            </Spacer>
           </SectionEnd>
         </Section>
 
