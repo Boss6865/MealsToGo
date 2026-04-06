@@ -22,7 +22,7 @@ export default function TabLayout() {
         options={{
           title: "Drooling",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="restart.circle" color={color} />
+            <IconSymbol size={28} name="fork.knife" color={color} />
           ),
         }}
       />

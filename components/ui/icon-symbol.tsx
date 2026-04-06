@@ -22,7 +22,7 @@ const MAPPING = {
   "pet.carrier.fill": "pets",
   "water.waves.slash": "water-drop",
   "map.fill": "map",
-  "restart.circle": "restaurant",
+  "fork.knife": "restaurant",
   "chevron.left.forwardslash.chevron.right": "code",
   "chevron.right": "chevron-right",
 } as IconMapping;
