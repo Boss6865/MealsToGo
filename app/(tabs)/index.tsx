@@ -1,5 +1,6 @@
 import { RestaurantScreen } from "@/features/resturants/screens/restaurants-screen";
 import { theme } from "@/infrastructure/theme";
+import { RestaurantsContextProvider } from "@/services/restaurants/restaurants.context";
 import { Lato_400Regular, useFonts as useLato } from "@expo-google-fonts/lato";
 import {
   Oswald_400Regular,
@@ -17,7 +18,9 @@ export default function HomeScreen() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <RestaurantScreen />
+        <RestaurantsContextProvider>
+          <RestaurantScreen />
+        </RestaurantsContextProvider>
       </ThemeProvider>
 
       <ExpoStatusBar style="auto"></ExpoStatusBar>
