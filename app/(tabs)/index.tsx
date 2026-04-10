@@ -1,5 +1,6 @@
 import { RestaurantScreen } from "@/features/resturants/screens/restaurants-screen";
 import { theme } from "@/infrastructure/theme";
+import { LocationContextProvider } from "@/services/location/location.context";
 import { RestaurantsContextProvider } from "@/services/restaurants/restaurants.context";
 import { Lato_400Regular, useFonts as useLato } from "@expo-google-fonts/lato";
 import {
@@ -18,9 +19,11 @@ export default function HomeScreen() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <RestaurantsContextProvider>
-          <RestaurantScreen />
-        </RestaurantsContextProvider>
+        <LocationContextProvider>
+          <RestaurantsContextProvider>
+            <RestaurantScreen />
+          </RestaurantsContextProvider>
+        </LocationContextProvider>
       </ThemeProvider>
 
       <ExpoStatusBar style="auto"></ExpoStatusBar>
